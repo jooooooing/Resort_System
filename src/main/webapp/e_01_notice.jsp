@@ -6,15 +6,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>공지사항 게시판</title>
+<title>Periwinkle Mansion</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
 <body>
 	<jsp:include page="menu.jsp" />
-	<h3>공지사항 게시판</h3>
-	<table cellspacing=1 width=600 border=1>
+	<h3>안내사항</h3>
+	<table class="table table-bordered table-striped table-sm thead-dark table-hover">
 		<tr>
 			<td width=50>
 				<p align=center>번호</p>
@@ -38,7 +38,7 @@
 		<tr>
 			<td align=center><%=id%></td>
 			<td>
-				<a href='notice_view.jsp?key=<%=id%>'><%=rset.getString(2)%></a>
+				<a href='e_01_notice_oneView.jsp?key=<%=id%>'><%=rset.getString(2)%></a>
 			</td>
 			<td align=center><%=rset.getString(3)%></td>
 		</tr>
@@ -46,26 +46,20 @@
 		}
 		%>
 	</table>
-	<br>
 	<table>
 		<tr>
-			<td width=550></td>
 			<td>
-				<input align=right type=submit OnClick="window.location.href='resort_notice_insert.jsp'" value=신규></input>
+				<input align=right type=submit OnClick="window.location.href='notice_insert.jsp'" value=신규></input>
 			</td>
 		</tr>
 	</table>
 
-	<table cellspacing=3 cellpadding=20>
-
-		<%
+	<%
 rset.close();
 stmt.close();
 conn.close();
 %>
 
-		</tr>
-	</table>
 	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

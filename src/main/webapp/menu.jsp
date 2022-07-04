@@ -9,7 +9,7 @@
 			<ul class="navbar-nav navbar-brand">
 				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> About </a>
 					<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-						<li><a class="dropdown-item" href="./about.jsp">Periwinkle Mansion</a></li>
+						<li><a class="dropdown-item" href="./a_00.jsp">Periwinkle Mansion</a></li>
 						<li><a class="dropdown-item" href="./a_01.jsp">Kitchen</a></li>
 						<li><a class="dropdown-item" href="./a_02.jsp">Bed Room</a></li>
 						<li><a class="dropdown-item" href="./a_03.jsp">Living Room</a></li>
@@ -32,15 +32,15 @@
 					</ul></li>
 				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Reservation </a>
 					<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-						<li><a class="dropdown-item" href="./about.jsp">예약상황</a></li>
-						<li><a class="dropdown-item" href="./about.jsp">예약하기</a></li>
-						<li><a class="dropdown-item" href="./about.jsp">관리자 페이지</a></li>
-						<li><a class="dropdown-item" href="./about.jsp">관리자 로그아웃</a></li>
+						<li><a class="dropdown-item" href="./d_01_resList.jsp">예약상황</a></li>
+						<li><a class="dropdown-item" href="./d_03_addResPage.jsp">예약하기</a></li>
+						<li><a class="dropdown-item" href="./DB_manage.jsp">관리자 페이지</a></li>
+						<li><a class="dropdown-item" href="./DB_manage.jsp">관리자 로그아웃</a></li>
 					</ul></li>
 				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Notice </a>
 					<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-						<li><a class="dropdown-item" href="./about.jsp">안내사항</a></li>
-						<li><a class="dropdown-item" href="./about.jsp">이용후기</a></li>
+						<li><a class="dropdown-item" href="./e_01_notice.jsp">안내사항</a></li>
+						<li><a class="dropdown-item" href="./e_02_review.jsp">이용후기</a></li>
 					</ul></li>
 			</ul>
 

@@ -20,8 +20,9 @@
 	<jsp:include page="menu.jsp"></jsp:include>
 
 	<div class="container">
-	a.01
+	Dining Room
 	</div>
+	
 
 	<jsp:include page="footer.jsp"></jsp:include>
 
