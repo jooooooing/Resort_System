@@ -20,7 +20,9 @@
 	<jsp:include page="menu.jsp"></jsp:include>
 
 	<div class="container">
-	a.01
+		<div class="img">
+			<img src='assets/bibong.png' style="width:500px; height:500px;">
+		</div>
 	</div>
 
 	<jsp:include page="footer.jsp"></jsp:include>

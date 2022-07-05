@@ -21,6 +21,10 @@
 
 	<div class="container">
 	Library Room
+		<div class="img">
+			<img src='assets/lib_bf.JPG' style="width: 500px; height: 400px;"> 
+			<img src='assets/lib_af.jpeg' style="width: 500px; height: 400px;">
+		</div>
 	</div>
 
 	<jsp:include page="footer.jsp"></jsp:include>

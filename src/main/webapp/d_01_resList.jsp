@@ -4,7 +4,7 @@
 
 <html>
 <head>
-<title>Product Stock List</title>
+<title>Periwinkle Mansion</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -55,8 +55,9 @@ ResultSet rset2 = stmt.executeQuery(sql2);
 	<jsp:include page="menu.jsp" />
 	<div class="container">
 		<h3>예약현황</h3>
-		<table
-			class="table table-bordered table-striped table-sm thead-dark table-hover">
+		<h3>Coming Soon</h3>
+		
+<%-- 		<table class="table table-bordered table-striped table-sm thead-dark table-hover">
 			<tr>
 				<td>날짜</td>
 				<td>1번</td>
@@ -64,6 +65,8 @@ ResultSet rset2 = stmt.executeQuery(sql2);
 				<td>3번</td>
 				<td>4번</td>
 				<td>5번</td>
+				<td>6번</td>
+				<td>7번</td>
 			</tr>
 			<%
 			while (rset2.next()) {
@@ -79,55 +82,7 @@ ResultSet rset2 = stmt.executeQuery(sql2);
 				out.println("</tr>");
 			}
 			%>
-		</table>
-<%-- 		<div class="pagination">
-			<%
-			// 페이징 처리
-			int no_page_now = Integer.parseInt(no_page); // request 파라미터로 들어온 현재 페이지 번호를 int형으로 변환하여 변수에 저장
-
-			int no_page_start = (no_page_now / size_group_page) * size_group_page + 1; // 페이징 그룹의 첫 페이지 번호
-			if ((no_page_now % size_group_page) == 0) { // 페이징 사이즈로 나누어 떨어지는 마지막 번호를 누르면 페이지가 넘어가는 예외를 처리
-				no_page_start -= size_group_page;
-			}
-
-			int no_page_last = 0; // 와이파이 게시판의 마지막 페이지 번호
-			if ((count_total % size_page) == 0) { // 총 레코드수가 리스트 사이즈로 나눠 떨어지면 그 몫이 총 페이지 개수 이지만
-				no_page_last = count_total / size_page;
-			} else { // 안 나눠 떨어지면 +1해줘야 총 페이지 개수이다.
-				no_page_last = count_total / size_page + 1;
-			}
-
-			out.println("<table>");
-
-			if (no_page_start != 1) { // 첫 페이징 그룹이 아닐 때만 <와 << 표시
-				out.println("<tr><td><a href='allStockList.jsp'>&lt;&lt;</a></td>"); // << 출력하고 첫 페이지로 이동 링크
-				out.println("<td><a href='allStockList.jsp?page=" + (no_page_start - 1) + "'>&lt;</a></td>"); // < 출력하고 이전 페이징 그룹의 마지막 페이지 링크
-			}
-
-			for (int i = no_page_start; i < no_page_start + size_group_page; i++) { // 현재 페이지 번호가 속한 페이징의 그룹의 (첫 페이지 번호) 부터 (첫 페이지 번호+페이징 그룹의 크기) 까지 반복
-				if (i > no_page_last) { // i가 마지막 페이지 번호이면 없는 이후 페이지 번호는 출력할 필요 없으므로
-					break; //   반복문 종료
-				}
-
-				if (i == no_page_now) { // 현재에 해당하는 페이지 번호이면 굵은 글씨로 표시
-					out.println("<td><b><a href='d_01_resList.jsp?page=" + i + "'>" + i + "</a></b></td>"); // 현재 페이징 그룹에 해당하는 페이지 번호 출력
-				} else { // 아니면 일반 굵기로 표시
-					out.println("<td><a href='d_01_resList.jsp?page=" + i + "'>" + i + "</a></td>"); // 현재 페이징 그룹에 해당하는 페이지 번호 출력
-				}
-			}
-
-			if (!(no_page_start <= no_page_last && no_page_last <= no_page_start + size_group_page) && (no_page_last != 0)) { // 마지막 페이징 그룹이 아닐 때와 출력할 데이터가 있을 때만 >와 >> 표시
-				out.println("<td><a href='d_01_resList.jsp?page=" + (no_page_start + size_group_page) + "'>&gt;</a></td>"); // > 출력하고 다음 페이징 그룹의 첫 페이지 링크
-				out.println("<td><a href='d_01_resList.jsp?page=" + no_page_last + "'>&gt;&gt;</a></td>"); // >> 출력하고 마지막 페이지로 이동 링크
-			}
-
-			out.println("<tr></table>");
-			%>
-			<div class="div_btn">
-				<input type="button" value="신규 등록"
-					onclick="window.location='addProductPage.jsp'">
-			</div>
-		</div> --%>
+		</table> --%>
 	</div>
 
 	<%

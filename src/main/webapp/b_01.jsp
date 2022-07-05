@@ -11,14 +11,19 @@
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3d2d068b0e03a9b93fbf47bf258ab73d"></script>
 
 <style>
+.map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 </style>
 </head>
 <body>
 	<jsp:include page="menu.jsp"></jsp:include>
 
-	<div id="map" style="width: 500px; height: 400px;"></div>
+<!-- 	<div id="map" style="width: 500px; height: 400px;"></div> -->
 
-	<script>
+<!-- 	<script>
 		var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
 		var options = { //지도를 생성할 때 필요한 기본 옵션
 			center : new kakao.maps.LatLng(37.4059, 126.9329), //지도의 중심좌표.
@@ -44,7 +49,25 @@
 
 		// 아래 코드는 지도 위의 마커를 제거하는 코드입니다
 		// marker.setMap(null);
+	</script> -->
+
+	<div class="map">
+	<!-- 1. 약도 노드 -->
+	<div id="daumRoughmapContainer1656942899026" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+	<!-- 2. 설치 스크립트 -->
+	<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+	<!-- 3. 실행 스크립트 -->
+	<script charset="UTF-8">
+		new daum.roughmap.Lander({
+			"timestamp" : "1656942899026",
+			"key" : "2au4k",
+			"mapWidth" : "640",
+			"mapHeight" : "360"
+		}).render();
 	</script>
+	</div>
 
 
 

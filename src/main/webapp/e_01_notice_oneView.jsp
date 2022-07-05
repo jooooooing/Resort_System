@@ -24,7 +24,7 @@ String title = rset.getString(2); //제목
 String today = rset.getString(3); // 날짜
 String content = rset.getString(4); //내용
 %>
-<title>글 보기</title>
+<title>Periwinkle Mansion</title>
 </head>
 <body>
 	<jsp:include page="menu.jsp" />

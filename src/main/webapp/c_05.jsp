@@ -20,7 +20,10 @@
 	<jsp:include page="menu.jsp"></jsp:include>
 
 	<div class="container">
-	a.01
+		<div class="img">
+			<img src='assets/gym.jpeg' style="width:550px; height:550px;">
+			<img src='assets/stadium.jpeg' style="width:550px; height:550px;">
+		</div>
 	</div>
 
 	<jsp:include page="footer.jsp"></jsp:include>

@@ -17,6 +17,7 @@
 .route {
 	text-align : left;
 }
+
 </style>
 </head>
 <body>
@@ -49,6 +50,24 @@
 			<td class="route">범계역 3번출구 > 목련선경아파트 버스승강장(10063 동안구청,달안 방면) > 7번 버스 탑승 > 평촌자이아이파크3문.양성교회/더포레스트힐 정류장 하차</td>
 		</tr>
 	</table>
+	
+		<div class="map">
+	<!-- 1. 약도 노드 -->
+	<div id="daumRoughmapContainer1656942899026" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+	<!-- 2. 설치 스크립트 -->
+	<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+	<!-- 3. 실행 스크립트 -->
+	<script charset="UTF-8">
+		new daum.roughmap.Lander({
+			"timestamp" : "1656942899026",
+			"key" : "2au4k",
+			"mapWidth" : "640",
+			"mapHeight" : "360"
+		}).render();
+	</script>
+	</div>
 
 	<jsp:include page="footer.jsp"></jsp:include>
 

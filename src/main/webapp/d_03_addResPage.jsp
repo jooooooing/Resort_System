@@ -4,7 +4,7 @@
 
 <html>
 <head>
-<title>Product Stock List</title>
+<title>Periwinkle Mansion</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -35,8 +35,10 @@ String today = new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util
 	<jsp:include page="menu.jsp" />
 	<form action="DB_write.jsp" method="get">
 		<div class="container">
-			<h3>재고현황-상품 상세</h3>
-			<table
+			<h3>예약하기</h3>
+			<h3>Coming Soon</h3>
+			
+<%-- 			<table
 				class="table table-bordered table-striped table-sm thead-dark table-hover">
 				<tr>
 					<td>상품번호</td>
@@ -77,15 +79,10 @@ String today = new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util
 					<input type="file" name="file">
 					<input type="submit" value="Upload">
 					</form>
-<!-- 					<textarea
-							style='width: 400px; height: 250px; overflow-y: scroll'
-							name=p_image cols=70 row=600></textarea> <input
-						type=button value="Upload"
-						onClick="window.location='imageUpload.jsp'"></td> -->
 				</tr>
 			</table>
 		<div class="div_btn">
-			<input type="submit" value="완료">
+			<input type="submit" value="완료"> --%>
 		</div>			
 		</div>
 	</form>
