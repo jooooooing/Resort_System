@@ -8,22 +8,30 @@
 <title>Periwinkle Mansion</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
+<link href="style.css" rel="stylesheet" type="text/css">
 <style>
 </style>
 </head>
 <body>
 	<jsp:include page="menu.jsp"></jsp:include>
-
-	<div class="container">
-		<h3>Bed Room</h3>
+	
+	<div class="container" id = "wrapper">
+	<h3 id="welcome">Bed Room</h3>
 		<div class="img">
-			<img src='assets/bed_bf.JPG' style="width: 500px; height: 400px;">
-			<img src='assets/bed_af.JPG' style="width: 500px; height: 400px;">
+			<table>
+			<tr>
+			<td><div id= "table-header"><b>Before</b></div></td>
+			<td><div id= "table-header"><b>After</b></div></td>
+			</tr>
+			<tr>
+			<td><img src='assets/bed_bf.JPG' style="width: 500px; height: 400px;"></td>
+			<td><img src='assets/bed_af.JPG' style="width: 500px; height: 400px;"></td>
+			</tr>
+			</table>
 		</div>
 	</div>
 
-	<jsp:include page="footer.jsp"></jsp:include>
+	<%-- <jsp:include page="footer.jsp"></jsp:include> --%>
 
 </body>
 </html>

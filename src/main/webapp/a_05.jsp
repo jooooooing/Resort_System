@@ -12,22 +12,31 @@
 	rel="stylesheet">
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
+<link href="style.css" rel="stylesheet" type="text/css">
 <style>
 </style>
 </head>
 <body>
 	<jsp:include page="menu.jsp"></jsp:include>
 
-	<div class="container">
-	Library Room
+	
+		<div class="container" id = "wrapper">
+	<h3 id="welcome">Library Room</h3>
 		<div class="img">
-			<img src='assets/lib_bf.JPG' style="width: 500px; height: 400px;"> 
-			<img src='assets/lib_af.jpeg' style="width: 500px; height: 400px;">
+			<table>
+			<tr>
+			<td><div id= "table-header"><b>Before</b></div></td>
+			<td><div id= "table-header"><b>After</b></div></td>
+			</tr>
+			<tr>
+			<td><img src='assets/lib_bf.JPG' style="width: 500px; height: 400px;"></td>
+			<td><img src='assets/lib_af.jpeg'style="width: 500px; height: 400px;"></td>
+			</tr>
+			</table>
 		</div>
 	</div>
 
-	<jsp:include page="footer.jsp"></jsp:include>
-
+<%-- 	<jsp:include page="footer.jsp"></jsp:include>
+ --%>
 </body>
 </html>

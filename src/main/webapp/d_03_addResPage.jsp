@@ -86,7 +86,7 @@ String today = new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util
 		</div>			
 		</div>
 	</form>
-	<jsp:include page="footer.jsp"></jsp:include>
+<%-- 	<jsp:include page="footer.jsp"></jsp:include> --%>
 </body>
 </html>
 </head>

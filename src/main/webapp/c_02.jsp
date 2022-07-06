@@ -16,12 +16,13 @@
 	<jsp:include page="menu.jsp"></jsp:include>
 
 	<div class="container">
+	<br>
 		<div class="img">
 			<img src='assets/anyangcheon.jpeg' style="width:700px; height:500px;">
 		</div>
 	</div>
 
-	<jsp:include page="footer.jsp"></jsp:include>
+<%-- 	<jsp:include page="footer.jsp"></jsp:include> --%>
 
 </body>
 </html>

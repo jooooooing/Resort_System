@@ -12,7 +12,7 @@
 	rel="stylesheet">
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
+<link href="style.css" rel="stylesheet" type="text/css">
 <style>
 #wrapper{
   height: auto;
@@ -33,7 +33,7 @@
 	</div>
 	</div>
 
-	<jsp:include page="footer.jsp"></jsp:include>
-
+<%-- 	<jsp:include page="footer.jsp"></jsp:include>
+ --%>
 </body>
 </html>

@@ -60,9 +60,7 @@ String content = rset.getString(4); //내용
 				<b>내용</b>
 			</td>
 			<td width=480 colspan=3 align=left>
-				<textarea rows="10px" cols="60px" readonly>
-<%=content%>
-</textarea>
+				<textarea rows="10px" cols="60px" readonly><%=content%></textarea></td>
 		</tr>
 		<%
 		rset.close();

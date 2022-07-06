@@ -91,7 +91,7 @@ ResultSet rset2 = stmt.executeQuery(sql2);
 	stmt.close();
 	conn.close();
 	%>
-	<jsp:include page="footer.jsp"></jsp:include>
+<%-- 	<jsp:include page="footer.jsp"></jsp:include> --%>
 </body>
 </html>
 </head>

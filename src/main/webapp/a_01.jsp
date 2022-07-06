@@ -18,18 +18,29 @@
 </style>
 </head>
 <body>
-	<jsp:include page="menu.jsp"></jsp:include>
+	<div id="header">
+	<jsp:include page="menu.jsp"></jsp:include>	
+	</div>
 
 	<div class="container" id = "wrapper">
-	<h3>Kitchen</h3>
+	<h3 id="welcome">Kitchen</h3>
 		<div class="img">
-			<div><h4>Before After</h4></div>
-			<img src='assets/kitchen_bf.JPG' style="width:500px; height:400px;">
-			<img src='assets/kitchen_af.JPG' style="width:500px; height:400px;">
+			<table>
+			<tr>
+			<td><div id= "table-header"><b>Before</b></div></td>
+			<td><div id= "table-header"><b>After</b></div></td>
+			</tr>
+			<tr>
+			<td><img src='assets/kitchen_bf.JPG' style="width:500px; height:400px;"></td>
+			<td><img src='assets/kitchen_af.JPG' style="width:500px; height:400px;"></td>
+			</tr>
+			</table>
 		</div>
 	</div>
 
+<%-- 	<div id="footer">
 	<jsp:include page="footer.jsp"></jsp:include>
+	</div> --%>
 
 </body>
 </html>

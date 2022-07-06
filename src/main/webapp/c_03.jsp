@@ -18,14 +18,14 @@
 </head>
 <body>
 	<jsp:include page="menu.jsp"></jsp:include>
-
 	<div class="container">
+<br>
 		<div class="img">
 			<img src='assets/entersix.jpeg' style="width:600px; height:600px;">
 		</div>
 	</div>
 
-	<jsp:include page="footer.jsp"></jsp:include>
+<%-- 	<jsp:include page="footer.jsp"></jsp:include> --%>
 
 </body>
 </html>
