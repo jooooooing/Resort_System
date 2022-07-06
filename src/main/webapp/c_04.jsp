@@ -21,8 +21,9 @@
 
 	<div class="container">
 	<br>
-		<div class="img">
-			<img src='assets/lotte.jpeg' style="width:550px; height:550px;">
+		<div align="center">
+			<img src='assets/lotte.jpeg' style="width:300px; height:300px;">
+		<div><b>롯데백화점</b></div>
 		</div>
 	</div>
 

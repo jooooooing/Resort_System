@@ -21,13 +21,12 @@
 	<div class="container-fluid box" id="wrapper">
 		<div class="text-center">
 			<h3 id="welcome">Welcome to Periwinkle Mansion!</h3>
-			<div> <img src="assets/APL_3108.jpg" style="width:800px; height:600px;">
+			<div> <img src="assets/APL_3108.jpg" style="width:350px; height:250px;">
 			</div>
 			<%
 			Date now = new Date();
 			SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a");
 			%>
-			<h3 id="welcome">현재 접속 시각 : <%=format.format(now)%></h3>
 		</div>
 	</div>
 

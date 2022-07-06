@@ -10,24 +10,31 @@
 <%
 Class.forName("com.mysql.cj.jdbc.Driver");
 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/kopoctc", "root", "koposw31");
-Statement stmt = conn.createStatement(); //객체생성
-String id_notice = request.getParameter("key");
+Statement stmt = conn.createStatement();
+Statement stmt2 = conn.createStatement();
+String id = request.getParameter("key");
+String addViewCnt = "update resort_notice set viewcnt = viewcnt+1 where id = " + id + ";";
+stmt2.execute(addViewCnt);
+String viewOne = "select * from resort_notice where id = '" + id + "';"; //해당 번호만 조회
+ResultSet rset = stmt.executeQuery(viewOne); //쿼리문을 실행하고 반환한 값을 저장.
+String title = "";
+String contents = "";
+String rootid = "";
+int recnt, relevel, viewcnt = 0;
 
-Integer id = 0;
-
-id = Integer.parseInt(id_notice);
-
-ResultSet rset = stmt.executeQuery("select * from resort_notice where id = " + id + ";");
 rset.next();
-Integer id_notice2 = rset.getInt(1);//번호
-String title = rset.getString(2); //제목
-String today = rset.getString(3); // 날짜
-String content = rset.getString(4); //내용
+title = rset.getString(2);
+contents = rset.getString(4);
+recnt = rset.getInt(7);
+relevel = rset.getInt(6);
+viewcnt = rset.getInt(8);
+rootid = rset.getString(5);
 %>
 <title>Periwinkle Mansion</title>
 </head>
 <body>
 	<jsp:include page="menu.jsp" />
+	<center>
 	<br>
 	<table border=1 cellspacing=0 cellpadding=5>
 
@@ -52,7 +59,7 @@ String content = rset.getString(4); //내용
 				<b>일자</b>
 			</td>
 			<td width=480 colspan=3 align=left>
-				<input type='hidden' name="today" value=<%=today%>><%=today%></td>
+				<input type='hidden' name="today" value=<%=rset.getDate(3)%>><%=rset.getDate(3)%></td>
 		</tr>
 
 		<tr>
@@ -60,7 +67,7 @@ String content = rset.getString(4); //내용
 				<b>내용</b>
 			</td>
 			<td width=480 colspan=3 align=left>
-				<textarea rows="10px" cols="60px" readonly><%=content%></textarea></td>
+				<textarea rows="10px" cols="60px" readonly><%=contents%></textarea></td>
 		</tr>
 		<%
 		rset.close();
@@ -84,6 +91,9 @@ String content = rset.getString(4); //내용
 			</td>
 		</tr>
 	</table>
+	
+	</center>
+	
 
 </body>
 </html>

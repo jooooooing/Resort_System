@@ -6,13 +6,58 @@
 <html>
 <head>
 <title>새 글 추가</title>
-<style type="text/css">
+<style>
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+table {
+	text-align: center;
+}
+
+td {
+	border: 1px solid black;
+}
+
+.table-input {
+	width: 600px;
+	border-collapse: collapse;
+}
+
+.table-input td {
+	height: 30px;
+	border: 1px solid grey;
+}
+
+td.title {
+	border-right: 3px double grey;
+	background-color: lightgrey;
+}
+
+.align-left {
+	text-align: right;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
 textarea {
-	width: 100%;
-	text-align: left;
-	resize: none;
+	width: 450px;
+	height: 250px;
+}
+
+div.div-button {
+	text-align: right;
 }
 </style>
+
 <SCRIPT LANGUAGE="JavaScript">
 	function submitForm(mode) {
 		if (mode == "write") {
@@ -38,7 +83,6 @@ textarea {
 
 </head>
 
-<jsp:include page="menu.jsp" />
 <%
 Class.forName("com.mysql.cj.jdbc.Driver");
 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/kopoctc", "root", "koposw31");
@@ -46,44 +90,66 @@ Statement stmt = conn.createStatement(); //객체생성
 String today = new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util.Date());
 %>
 <body>
-<br>
-	<FORM METHOD=POST name='fm'>
-		<table width=650 border=1 cellspacing=0 cellpadding=5>
-			<tr>
-				<td><b>번호</b></td>
-				<td>신규(insert)<input type=hidden name=id value='INSERT'></td>
-				<!--hidden 은 사용자가 변경해선 안되는 데이터를 보낼 때 사용-->
-			</tr>
-			<tr>
-				<td><b>제목</b></td>
-				<td><input type="text" name=title size=70 maxlength=70
-					onkeyup="characterCheck(this)" onkeydown="characterCheck(this)"
-					required></td>
-			</tr>
-			<tr>
-				<td><b>일자</b></td>
-				<td><%=today%></td>
-			</tr>
-			<tr>
-				<td><b>내용</b></td>
-				<td><textarea
-						style='width: 500px; height: 250px; overflow-y: scroll'
-						name=content cols=70 row=600 required></textarea></td>
-			</tr>
-		</table>
-		<table width=650>
-			<tr>
-				<td width=600></td>
-				<td><input type=button value="취소"
-					onClick="window.location='e_01_notice.jsp'"></td>
-				<td><input type=button value="쓰기" onClick="submitForm('write')"></td>
-			</tr>
-			<%
+	<jsp:include page="menu.jsp" />
+	<br>
+	<div class="container">
+		<FORM METHOD=POST action="notice_write.jsp">
+			<center>
+
+
+				<table class="table-input">
+					<tr>
+						<td class="title">
+							<b>번호</b>
+						</td>
+						<td width="450px">
+							신규(insert)<input type=hidden name=id value='INSERT'>
+						</td>
+						<!--hidden 은 사용자가 변경해선 안되는 데이터를 보낼 때 사용-->
+					</tr>
+					<tr>
+						<td class="title">
+							<b>제목</b>
+						</td>
+						<td>
+							<input type="text" name=title size=70 maxlength=70 onkeyup="characterCheck(this)" onkeydown="characterCheck(this)" required>
+						</td>
+					</tr>
+					<tr>
+						<td class="title">
+							<b>일자</b>
+						</td>
+						<td><%=today%></td>
+					</tr>
+					<tr>
+						<td class="title">
+							<b>내용</b>
+						</td>
+						<td>
+							<textarea style='width: 500px; height: 250px; overflow-y: scroll' name=content cols=70 row=600 required></textarea>
+						</td>
+					</tr>
+				</table>
+
+
+				<table class="div-button">
+					<tr>
+						<td width=550></td>
+						<td>
+							<input type=button value="취소" onClick="window.location='e_02_review.jsp?from=0&cnt=15&page=1'">
+						</td>
+						<td>
+							<input type=submit value="쓰기">
+						</td>
+					</tr>
+				</table>
+			</center>
+
+		</FORM>
+		<%
 stmt.close();
 conn.close();
 %>
-
-		</table>
-	</FORM>
+	
 </body>
 </html>

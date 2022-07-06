@@ -20,8 +20,9 @@
 	<jsp:include page="menu.jsp"></jsp:include>
 	<div class="container">
 <br>
-		<div class="img">
-			<img src='assets/entersix.jpeg' style="width:600px; height:600px;">
+		<div align="center">
+			<img src='assets/entersix.jpeg' style="width:300px; height:300px;">
+		<div><b>엔터식스</b></div>
 		</div>
 	</div>
 

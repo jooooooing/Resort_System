@@ -21,9 +21,10 @@
 
 	<div class="container">
 	<br>
-		<div class="img">
-			<img src='assets/gym.jpeg' style="width:550px; height:550px;">
-			<img src='assets/stadium.jpeg' style="width:550px; height:550px;">
+		<div align="center">
+			<img src='assets/gym.jpeg' style="width:300px; height:300px;">
+			<img src='assets/stadium.jpeg' style="width:300px; height:300px;">
+		<div><b>안양종합운동장</b></div>
 		</div>
 	</div>
 

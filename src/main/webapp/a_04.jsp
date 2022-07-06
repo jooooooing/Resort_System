@@ -16,18 +16,18 @@
 	<jsp:include page="menu.jsp"></jsp:include>
 
 		<div class="container" id = "wrapper">
-	<h3 id="welcome">Dining Room</h3>
-		<div class="img">
+		<div align="center">
 			<table>
 			<tr>
 			<td><div id= "table-header"><b>Before</b></div></td>
 			<td><div id= "table-header"><b>After</b></div></td>
 			</tr>
 			<tr>
-			<td><img src='assets/dining_bf.JPG' style="width: 500px; height: 400px;"></td>
-			<td><img src='assets/dining_af.JPG' style="width: 500px; height: 400px;"></td>
+			<td><img src='assets/dining_bf.JPG' style="width:400px; height:300px;"></td>
+			<td><img src='assets/dining_af.JPG' style="width:400px; height:300px;"></td>
 			</tr>
 			</table>
+		<div><b>다이닝룸 입니다.</b></div>
 		</div>
 	</div>
 

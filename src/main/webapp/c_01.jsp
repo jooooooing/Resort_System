@@ -21,8 +21,9 @@
 
 	<div class="container">
 	<br>
-		<div class="img">
-			<img src='assets/bibong.png' style="width:500px; height:500px;">
+		<div align="center">
+			<img src='assets/bibong.png' style="width:400px; height:300px;">
+			<div><b>비봉산</b></div>
 		</div>
 	</div>
 

@@ -24,7 +24,12 @@
 <style>
  .container {
  margin-top : 5px;
+ 	display: flex;
+	justify-content: center;
+	align-items: center;
  }
+ 
+ 
 </style>
 </head>
 <%
@@ -35,7 +40,6 @@ String today = new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util
 	<jsp:include page="menu.jsp" />
 	<form action="DB_write.jsp" method="get">
 		<div class="container">
-			<h3>예약하기</h3>
 			<h3>Coming Soon</h3>
 			
 <%-- 			<table

@@ -1,9 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
+<script src="https://kit.fontawesome.com/724e98d05d.js" crossorigin="anonymous"></script>
+
 <nav class="navbar navbar-expand navbar-dark bg-dark">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<a href="./home.jsp" class="navbar-brand" >Home</a>
+			<a href="./home.jsp" class="navbar-brand" ><i class="fa-solid fa-xl fa-hotel"></i></a>
 		</div>
 		<div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
 			<ul class="navbar-nav navbar-brand">
@@ -19,8 +21,8 @@
 				<li class="navbar-brand dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Location </a>
 					<ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
 						<li><a class="dropdown-item" href="./b_01.jsp">찾아오시는 길</a></li>
-						<li><a class="dropdown-item" href="./b_02.jsp">대중교통 이용</a></li>
-						<li><a class="dropdown-item" href="./b_03.jsp">자가용 이용</a></li>
+<!-- 						<li><a class="dropdown-item" href="./b_02.jsp">대중교통 이용</a></li>
+						<li><a class="dropdown-item" href="./b_03.jsp">자가용 이용</a></li> -->
 					</ul></li>
 				<li class="navbar-brand dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Attraction </a>
 					<ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">

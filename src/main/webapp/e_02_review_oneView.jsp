@@ -10,26 +10,79 @@
 <%
 Class.forName("com.mysql.cj.jdbc.Driver");
 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/kopoctc", "root", "koposw31");
-Statement stmt = conn.createStatement(); //객체생성
-String id_notice = request.getParameter("key");
+Statement stmt = conn.createStatement();
+Statement stmt2 = conn.createStatement();
+String id = request.getParameter("key");
+String addViewCnt = "update resort_review set viewcnt = viewcnt+1 where id = " + id + ";";
+stmt2.execute(addViewCnt);
+String viewOne = "select * from resort_review where id = '" + id + "';"; //해당 번호만 조회
+ResultSet rset = stmt.executeQuery(viewOne); //쿼리문을 실행하고 반환한 값을 저장.
+String title = "";
+String contents = "";
+String rootid = "";
+int recnt, relevel, viewcnt = 0;
 
-Integer id = 0;
-
-id = Integer.parseInt(id_notice);
-
-ResultSet rset = stmt.executeQuery("select * from resort_notice where id = " + id + ";");
 rset.next();
-Integer id_notice2 = rset.getInt(1);//번호
-String title = rset.getString(2); //제목
-String today = rset.getString(3); // 날짜
-String content = rset.getString(4); //내용
+title = rset.getString(2);
+contents = rset.getString(4);
+recnt = rset.getInt(7);
+relevel = rset.getInt(6);
+viewcnt = rset.getInt(8);
+rootid = rset.getString(5);
 %>
-<title>Periwinkle Mansion</title>
+<title>글 보기</title>
+<style>
+    .container {
+      max-width: 600px;
+      margin:0 auto;
+    }
+    table {
+      text-align: center;
+    }
+    td {
+      border: 1px solid black;
+    }
+    .table-view {
+      width: 600px;
+      border-collapse: collapse;
+    }
+    .table-view td {
+      height: 30px;
+      border: 1px solid grey;
+    }
+    td.title {
+      border-right: 3px double grey;
+      background-color: lightgrey;
+    }
+    .align-left {
+      text-align: right;
+    }
+    a {
+      color: black;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    #content {
+      height: 200px;
+    }
+    div.div-button {
+      text-align: right;
+    }
+    textarea {
+      width: 98%;
+      height: 10em;
+      border: none;
+      resize: none;
+    }
+  </style>
 </head>
 <body>
-	<jsp:include page="menu.jsp" />
-	<br>
-	<table border=1 cellspacing=0 cellpadding=5>
+		<jsp:include page="menu.jsp" />
+		<div class="container">
+		<br>
+		<table cellspacing=1 width=650 border="1" style="margin-left: auto; margin-right: auto;">
 
 		<tr>
 			<td>
@@ -52,42 +105,57 @@ String content = rset.getString(4); //내용
 				<b>일자</b>
 			</td>
 			<td width=480 colspan=3 align=left>
-				<input type='hidden' name="today" value=<%=today%>><%=today%></td>
+				<input type='hidden' name="today" value=<%=rset.getDate(3)%>><%=rset.getDate(3)%></td>
 		</tr>
-
 		<tr>
-			<td>
-				<b>내용</b>
-			</td>
-			<td width=480 colspan=3 align=left>
-				<textarea rows="10px" cols="60px" readonly>
-<%=content%>
-</textarea>
+			<td>조회수</td>
+			<td><%=viewcnt%></td>
 		</tr>
-		<%
-		rset.close();
-		stmt.close();
-		conn.close();
-		%>
+		<tr>
+		<td>내용</td>
+		
+		
+		
+		<td width=480 colspan=3 align=left><textarea><%=contents%></textarea></td>
+		</tr>
+		
+		<tr>
+			<td>원글</td>
+			<td><%=rootid%></td>
+		</tr>
+		
+		<tr>
+			<td>댓글수준</td>
+			<td><%=relevel%> <b>댓글내 순서<%=recnt%></b></td>
+		</tr>
+	</table> 
+			<%
+			rset.close();
+			stmt.close();
+			conn.close();
+			%>
 
-	</table>
-	<table width=540>
+	<table width="650" style="margin-left: auto; margin-right: auto;">
 
 		<tr>
 			<td width=500></td>
 			<td>
-				<input type=button value="목록" OnClick="location.href='e_01_notice.jsp'">
+				<input type=button value="목록" OnClick="location.href='e_02_review.jsp?from=0&cnt=15&page=1'">
 			</td>
 			<td>
-				<input type=button value="수정" OnClick="location.href='notice_updateView.jsp?key=<%=id%>'">
+				<input type=button value="수정" OnClick="location.href='ReNotice_updateView.jsp?key=<%=id%>'">
 			</td>
 			<td>
-				<input type=button value="삭제" OnClick="location.href='notice_delete.jsp?key=<%=id%>'">
+				<input type=button value="삭제" OnClick="location.href='ReNotice_redelete.jsp?key=<%=id%>&relevel=<%=relevel%>'">
+			</td>
+			<td>
+				<input type=button value="댓글" OnClick="location.href='ReNotice_reinsert.jsp?key=<%=id%>&relevel=<%=relevel%>&recnt=<%=recnt%>&rootid=<%=rootid%>'">
 			</td>
 		</tr>
 	</table>
-
+</div>
 </body>
 </html>
+
 
 

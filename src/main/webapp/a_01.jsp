@@ -23,18 +23,18 @@
 	</div>
 
 	<div class="container" id = "wrapper">
-	<h3 id="welcome">Kitchen</h3>
-		<div class="img">
+		<div align="center">
 			<table>
 			<tr>
 			<td><div id= "table-header"><b>Before</b></div></td>
 			<td><div id= "table-header"><b>After</b></div></td>
 			</tr>
 			<tr>
-			<td><img src='assets/kitchen_bf.JPG' style="width:500px; height:400px;"></td>
-			<td><img src='assets/kitchen_af.JPG' style="width:500px; height:400px;"></td>
+			<td><img src='assets/kitchen_bf.JPG' style="width:400px; height:300px;"></td>
+			<td><img src='assets/kitchen_af.JPG' style="width:400px; height:300px;"></td>
 			</tr>
 			</table>
+		<div><b>주방입니다.</b></div>
 		</div>
 	</div>
 

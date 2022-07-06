@@ -17,8 +17,9 @@
 
 	<div class="container">
 	<br>
-		<div class="img">
-			<img src='assets/anyangcheon.jpeg' style="width:700px; height:500px;">
+		<div align="center">
+			<img src='assets/anyangcheon.jpeg' style="wwidth:400px; height:300px;">
+		<div><b>안양천</b></div>
 		</div>
 	</div>
 
